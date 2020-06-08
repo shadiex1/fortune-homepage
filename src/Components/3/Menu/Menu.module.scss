@@ -1,0 +1,67 @@
+.menu {
+  .banner {
+    border-bottom: 1px solid #e5e5e5;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 70%;
+      margin: auto;
+
+      ul {
+          
+        li {
+          list-style-type: none;
+          display: inline-block;
+          margin: 1rem;
+
+          i {
+            color: #6b6b6b;
+            font-size: 1.5rem;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  .nav {
+    width: 70%;
+    margin: auto;
+    padding-top: 1rem;
+   
+    .toggler {
+      span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin-bottom: 5px;
+        position: relative;
+        
+
+        background:#6B6B6B;
+        border-radius: 2px;
+
+        z-index: 1;
+
+        &:nth-of-type(2){
+            width: 20px;
+        }
+      }
+    }
+    ul{
+        padding: 0;
+        margin: 0; 
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+        li{
+            list-style-type: none;
+            display: inline-block;
+            margin-right: 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+  }
+}
