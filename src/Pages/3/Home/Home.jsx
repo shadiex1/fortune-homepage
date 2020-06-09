@@ -6,7 +6,9 @@ import ProductsOverview from "../../../Components/3/products Overview/productsOv
 import BrandsCollection from "../../../Components/3/brands collection/brandsCollection";
 import AllProducts from "../../../Components/3/all products/AllProducts";
 import VrPlaceholder from "../../../Components/3/vrPlaceholder/vrPlaceholder";
-import LogoSlider from "../../../Components/3/logoSlider/logoSlider"
+import LogoSlider from "../../../Components/3/logoSlider/logoSlider";
+import Branches from "../../../Components/3/branches/branches";
+import Footer from "../../../Components/3/Footer/Footer"
 const Home =()=>(
     <div className={styles.Home}>
         <Menu/>
@@ -16,6 +18,8 @@ const Home =()=>(
         <AllProducts/>
         <VrPlaceholder/>
         <LogoSlider/>
+        <Branches/>
+        <Footer/>
     </div>
 ) 
 
