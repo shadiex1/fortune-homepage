@@ -20,8 +20,8 @@ const Showcase =() => (
            
         }}
         >
-            <img src={carousel1}/>
-            <img src={carousel1}/>
+            <img src={carousel1} alt="item"/>
+            <img src={carousel1} alt="item"/>
         </Carousel>
     </div>
 )
