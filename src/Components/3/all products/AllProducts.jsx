@@ -27,7 +27,7 @@ class AllProducts extends Component {
                 <span className={styles.title}>FOR HIM & HER MUST-HAVES</span>
                 <div className={styles.productsGallery}>
                     {this.state.products.map(item=>(
-                                <Card key={item.id} discount imgURL={item.imgURL} title={item.title} brand={item.brand} price={item.price} oldPrice={item.oldPrice}/>
+                                <Card addToCart={()=>this.props.addItem(item)} key={item.id} discount imgURL={item.imgURL} title={item.title} brand={item.brand} price={item.price} oldPrice={item.oldPrice}/>
                             ))}
                 </div>
                 <button className={styles.viewBtn}>View all  <span className={styles.arrows}>>></span></button>

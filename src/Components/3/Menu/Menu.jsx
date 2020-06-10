@@ -1,17 +1,19 @@
 import React from "react";
 import styles from "./Menu.module.scss";
 import logo from "../../../assets/menu/Rectangle.png";
+import UserDropdown from "../userDropdown/userDropdown";
 
 const Menu = (props)=> (
     <div className={styles.menu}>
-    <div className={styles.banner}>
+        {props.showUserDropdown ?  <UserDropdown/> : null}
+       <div className={styles.banner}>
         <div><img src={logo} alt="logo"/>
         <ul>
             <li>
             <i className="fas fa-search"></i>
             </li>
             <li>
-            <i className="far fa-user-circle"></i>
+            <i onClick={props.toggleUser} className="far fa-user-circle"></i>
             </li>
             <li>
             <i className="far fa-heart"></i>
@@ -21,7 +23,8 @@ const Menu = (props)=> (
             </li>
         </ul> 
         </div>
-        
+                    
+
     </div>
         <nav className={styles.nav}>
            

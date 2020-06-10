@@ -1,6 +1,14 @@
-.menu {
-  .banner {
+.menu { 
+  position: relative;
+  .banner {position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    background-color: white;
     border-bottom: 1px solid #e5e5e5;
+    height: 5rem;
+   
 
     div {
       display: flex;
@@ -31,8 +39,7 @@
   }
   .nav {
     width: 70%;
-    margin: auto;
-    padding-top: 1rem;
+    margin: 6rem auto 0;
    
     .toggler {
       span {

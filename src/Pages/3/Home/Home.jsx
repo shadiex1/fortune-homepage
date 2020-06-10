@@ -10,11 +10,13 @@ import LogoSlider from "../../../Components/3/logoSlider/logoSlider";
 import Branches from "../../../Components/3/branches/branches";
 import Footer from "../../../Components/3/Footer/Footer";
 import CartSidebar from "../../../Components/3/cartSidebar/cartSidebar";
+import UserDropdown from "../../../Components/3/userDropdown/userDropdown";
 
 class Home extends Component {
     state={
         cartItems:[],
-        showCart:false
+        showCart:false,
+        showUser:false
 
     }
 
@@ -24,6 +26,9 @@ class Home extends Component {
     showCartToggleHandler =()=>{
       this.setState((prevState) => {return {showCart: !prevState.showCart}})
   }
+    toggleUserHandler=()=>{
+        this.setState((prevState)=>{return {showUser:!prevState.showUser}})
+    }
     addItemToCart=(item)=>{
         const cartItems=[...this.state.cartItems]
         cartItems.push(item);
@@ -32,16 +37,17 @@ class Home extends Component {
     render(){
         return(
             <div className={styles.Home}>
-        <Menu showCart={this.showCartToggleHandler}/>
+        <Menu toggleUser={this.toggleUserHandler} showUserDropdown={this.state.showUser} showCart={this.showCartToggleHandler}/>
         <Showcase/>
         <ProductsOverview addItem={(item)=>this.addItemToCart(item)}/>
         <BrandsCollection/>
-        <AllProducts/>
+        <AllProducts addItem={(item)=>this.addItemToCart(item)}/>
         <VrPlaceholder/>
         <LogoSlider/>
         <Branches/>
         <Footer/>
         <CartSidebar open={this.state.showCart} closed={this.showCartClosedHandler} cart={this.state.cartItems}/>
+        {/* <UserDropdown/> */}
         
     </div>
         )
