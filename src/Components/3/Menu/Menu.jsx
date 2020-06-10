@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Menu.module.scss";
 import logo from "../../../assets/menu/Rectangle.png";
 
-const Menu = ()=> (
+const Menu = (props)=> (
     <div className={styles.menu}>
     <div className={styles.banner}>
         <div><img src={logo} alt="logo"/>
@@ -17,7 +17,7 @@ const Menu = ()=> (
             <i className="far fa-heart"></i>
             </li>
             <li>
-            <i className="fas fa-shopping-cart"></i>
+            <i onClick={props.showCart} className="fas fa-shopping-cart"></i>
             </li>
         </ul> 
         </div>

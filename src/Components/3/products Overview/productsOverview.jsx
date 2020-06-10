@@ -10,12 +10,12 @@ import productimg4 from "../../../assets/products/Component4.png"
 class ProductsOverview extends Component {
     state={
         products : [
-            {imgURL:productimg1,title:"Wanted set EDT 100 ML +  ",brand:"AZZARO" , price:"1,900 EGP"},
-            {imgURL:productimg2,title:"Clarins Super restorative total eye CO",brand:"CLARINS" , price:"1,750 EGP" , oldPrice:"2000 EGP"},
-            {imgURL:productimg3,title:"Armani code absolu homme EDP 110 ML Deo Spray ...",brand:"GIORGIO ARMANI" , price:"2,599 EGP"},
-            {imgURL:productimg4,title:"Givenchy make-up le rouge NO. 306 ",brand:"GIVENCHY" , price:"835 EGP" ,oldPrice:"1,000 EGP"},
-            {imgURL:productimg1,title:"Wanted set EDT 100 ML + ",brand:"AZZARO" , price:"1,900 EGP"},
-            {imgURL:productimg3,title:"Armani code absolu homme EDP 110 ML Deo Spray ...",brand:"GIORGIO ARMANI" , price:"2,599 EGP"}
+            {id:1,imgURL:productimg1,title:"Wanted set EDT 100 ML +  ",brand:"AZZARO" , price:"1,900 EGP"},
+            {id:2,imgURL:productimg2,title:"Clarins Super restorative total eye CO",brand:"CLARINS" , price:"1,750 EGP" , oldPrice:"2000 EGP"},
+            {id:3,imgURL:productimg3,title:"Armani code absolu homme EDP 110 ML Deo Spray ...",brand:"GIORGIO ARMANI" , price:"2,599 EGP"},
+            {id:4,imgURL:productimg4,title:"Givenchy make-up le rouge NO. 306 ",brand:"GIVENCHY" , price:"835 EGP" ,oldPrice:"1,000 EGP"},
+            {id:5,imgURL:productimg1,title:"Wanted set EDT 100 ML + ",brand:"AZZARO" , price:"1,900 EGP"},
+            {id:6,imgURL:productimg3,title:"Armani code absolu homme EDP 110 ML Deo Spray ...",brand:"GIORGIO ARMANI" , price:"2,599 EGP"}
         ]
     }
     render(){
@@ -45,8 +45,8 @@ class ProductsOverview extends Component {
                            
                         }}
                         >
-                            {this.state.products.map(({imgURL,title,brand,price,oldPrice})=>(
-                                <Card discount imgURL={imgURL} title={title} brand={brand} price={price} oldPrice={oldPrice}/>
+                            {this.state.products.map(item=>(
+                                <Card key={item.id} addToCart={()=>this.props.addItem(item)} discount imgURL={item.imgURL} title={item.title} brand={item.brand} price={item.price} oldPrice={item.oldPrice}/>
                             ))}
                         </Carousel>
                         <button className={styles.viewBtn}>View all  <span className={styles.arrows}>>></span></button>
@@ -75,8 +75,8 @@ class ProductsOverview extends Component {
                            
                         }}
                         >
-                            {this.state.products.map(({imgURL,title,brand,price,oldPrice})=>(
-                                <Card discount imgURL={imgURL} title={title} brand={brand} price={price} oldPrice={oldPrice}/>
+                            {this.state.products.map(item=>(
+                                <Card key={item.id} addToCart={()=>this.props.addItem(item)} discount imgURL={item.imgURL} title={item.title} brand={item.brand} price={item.price} oldPrice={item.oldPrice}/>
                             ))}
                         </Carousel>
                         <button className={styles.viewBtn}>View all  <span className={styles.arrows}>>></span></button>

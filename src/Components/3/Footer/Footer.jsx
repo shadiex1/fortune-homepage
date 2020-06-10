@@ -23,8 +23,8 @@ const footer = () => (
           11907 - 154 st., Cairo, Egypt. +2 (123) 456 7890 info@fotune.com.eg
         </p>
         <div className={styles.icons}>
-        <i class="fab fa-facebook-square"></i>
-        <i class="fab fa-instagram"></i>
+        <i className="fab fa-facebook-square"></i>
+        <i className="fab fa-instagram"></i>
         </div>
       </div>
     </div>

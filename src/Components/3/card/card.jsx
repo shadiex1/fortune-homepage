@@ -11,7 +11,7 @@ const Card = props => (
             {props.discount ? <span className={styles.oldPrice}>{props.oldPrice}</span>:null}
          </div>
          <div className={styles.cartContainer}>
-              <button className={styles.addBtn}>Add to cart</button>
+              <button onClick={props.addToCart} className={styles.addBtn}>Add to cart</button>
          <i className="far fa-heart"></i>
          </div>
         

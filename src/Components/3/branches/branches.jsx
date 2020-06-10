@@ -9,7 +9,7 @@ const branches =()=>(
         </div>
         <div className={styles.viewBranches}>
             <button className={styles.btn} >
-            <i class="fas fa-map-marker-alt"></i>
+            <i className="fas fa-map-marker-alt"></i>
             <span>View Our Branches</span>
             </button>
         </div>
