@@ -10,12 +10,14 @@ import LogoSlider from "../../../Components/3/logoSlider/logoSlider";
 import Branches from "../../../Components/3/branches/branches";
 import Footer from "../../../Components/3/Footer/Footer";
 import CartSidebar from "../../../Components/3/cartSidebar/cartSidebar";
+import MenuSidebar from "../../../Components/3/menuSidebar/menuSidebar";
 
 class Home extends Component {
     state={
         cartItems:[],
         showCart:false,
-        showUser:false
+        showUser:false,
+        showMenuSidebar:false
 
     }
 
@@ -24,6 +26,13 @@ class Home extends Component {
     }
     showCartToggleHandler =()=>{
       this.setState((prevState) => {return {showCart: !prevState.showCart}})
+  }
+   
+  showMenuSidebarClosedHandler=()=>{
+    this.setState({showMenuSidebar:false})
+} 
+showMenuSidebarToggleHandler =()=>{
+      this.setState((prevState) => {return {showMenuSidebar: !prevState.showMenuSidebar}})
   }
     
     addItemToCart=(item)=>{
@@ -34,7 +43,7 @@ class Home extends Component {
     render(){
         return(
             <div className={styles.Home}>
-        <Menu toggleUser={this.toggleUserHandler} showUserDropdown={this.state.showUser} showCart={this.showCartToggleHandler}/>
+        <Menu showMenuSidebar={this.showMenuSidebarToggleHandler} toggleUser={this.toggleUserHandler} showUserDropdown={this.state.showUser} showCart={this.showCartToggleHandler}/>
         <Showcase/>
         <ProductsOverview addItem={(item)=>this.addItemToCart(item)}/>
         <BrandsCollection/>
@@ -44,7 +53,7 @@ class Home extends Component {
         <Branches/>
         <Footer/>
         <CartSidebar open={this.state.showCart} closed={this.showCartClosedHandler} cart={this.state.cartItems}/>
-        
+        <MenuSidebar open={this.state.showMenuSidebar} closed={this.showMenuSidebarClosedHandler} />
         
     </div>
         )

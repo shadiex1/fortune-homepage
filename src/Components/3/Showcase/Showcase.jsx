@@ -7,6 +7,7 @@ import carousel1 from "../../../assets/MaskGroup1.png"
 const Showcase =() => (
     <div className={styles.showcase}>
         <Carousel 
+        heightMode="max"
         autoplay
         wrapAround
         defaultControlsConfig={{

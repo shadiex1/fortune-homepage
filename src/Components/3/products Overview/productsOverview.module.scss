@@ -2,10 +2,13 @@
         width: 70%;
         margin: 3rem auto;
     .newArrivals{
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
         .header{
             font-size: 2rem;
-            margin: 2rem auto;
+            margin: auto;
             text-align: center;
             font-weight: 600;
         }
@@ -17,8 +20,15 @@
             .category{
             color: var(--secondary-color);
             border-bottom: 2px solid var(--light-secondary-color);
-            margin-right: 2rem;
+            margin: 0 5rem 0 5rem;
             font-size: 1.5rem;
+            width: 80%;
+            display: block;
+            &:hover{
+                color: var(--primary-color);
+                border-bottom: 2px solid var(--primary-color);
+
+            }
         }
         }
         

@@ -44,7 +44,7 @@ class Menu extends Component {
         <nav className={styles.nav}>
             
             <ul> 
-                <div className={styles.toggler}>
+                <div onClick={this.props.showMenuSidebar} className={styles.toggler}>
                 <span></span>
                 <span></span>
                 <span></span>
