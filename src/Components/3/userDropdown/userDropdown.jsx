@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "./userDropdown.module.scss";
+import  Backdrop from "../backdrop/backdrop";
 
 const userDropdown = (props) => (
+    <React.Fragment>
+            <Backdrop show={props.open} clicked={props.closed} />
     <div className={styles.user}>
         <h3>Sign in</h3>
         
@@ -27,6 +30,7 @@ const userDropdown = (props) => (
        <button className={styles.google}> <i class="fab fa-google"></i>Log in with Google account</button>
        <button className={styles.signUp}>Sign up</button>
     </div>
+    </React.Fragment>
 )
 
 export default userDropdown
