@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 import logo from "../../../assets/menu/Rectangle.png";
-import nasNavLogo from "../../../assets/Rectangle134.png"
+import nasNavLogo from "../../../assets/Rectangle134.png";
 
 const footer = () => (
   <div className={styles.footer}>
@@ -23,21 +23,19 @@ const footer = () => (
           11907 - 154 st., Cairo, Egypt. +2 (123) 456 7890 info@fotune.com.eg
         </p>
         <div className={styles.icons}>
-        <i className="fab fa-facebook-square"></i>
-        <i className="fab fa-instagram"></i>
+          <i className="fab fa-facebook-square"></i>
+          <i className="fab fa-instagram"></i>
         </div>
       </div>
     </div>
     <hr></hr>
     <div className={styles.copyrights}>
-        <p>&copy; Fortune.Inc</p> 
-        <div className={styles.image}>
-             <span>Powerd by</span> <img src={nasNavLogo} alt="NasNav Logo"/>
-        </div>
-       
+      <p>&copy; Fortune.Inc</p>
+      <div className={styles.image}>
+        <span>Powerd by</span> <img src={nasNavLogo} alt="NasNav Logo" />
+      </div>
     </div>
   </div>
 );
 
-
-export default footer
+export default footer;

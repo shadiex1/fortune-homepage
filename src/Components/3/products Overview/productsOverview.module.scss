@@ -1,92 +1,97 @@
-.productsOverview{
-        width: 70%;
-        margin: 3rem auto;
-    .newArrivals{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+.productsOverview {
+  width: 70%;
+  margin: 3rem auto;
+  li {
+    outline: none;
+  }
+  .newArrivals {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-        .header{
-            font-size: 2rem;
-            margin: auto;
-            text-align: center;
-            font-weight: 600;
-        }
-        .categories{
-            margin:2rem auto;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            .category{
-            color: var(--secondary-color);
-            border-bottom: 2px solid var(--light-secondary-color);
-            margin: 0 5rem 0 5rem;
-            font-size: 1.5rem;
-            width: 80%;
-            display: block;
-            &:hover{
-                color: var(--primary-color);
-                border-bottom: 2px solid var(--primary-color);
-
-            }
-        }
-        }
-        
+    .header {
+      font-size: 2rem;
+      margin: auto;
+      text-align: center;
+      font-weight: 600;
     }
+    .categories {
+      margin: 2rem auto;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      .category {
+        color: var(--secondary-color);
+        border-bottom: 2px solid var(--light-secondary-color);
+        margin: 0 5rem 0 5rem;
+        font-size: 1.5rem;
+        width: 80%;
+        display: block;
+        &:hover {
+          color: var(--primary-color);
+          border-bottom: 2px solid var(--primary-color);
+        }
+      }
+    }
+  }
 }
 
+.next {
+  outline: none;
+  transform: translateX(100%);
+  width: 3rem;
+  font-size: 1.2rem;
+  color: #d5293f !important;
+  font-weight: bold;
+  background-color: rgba(var(--light-secondary-color), 0.4) !important;
+  height: 3rem;
+  border-radius: 50%;
+}
 
-.next{
-    outline: none;  
-    transform: translateX(100%);
-    width: 3rem;
-    font-size: 1.2rem;
-    color: #D5293F!important;
-    font-weight: bold;
-    background-color: rgba(var(--light-secondary-color), 0.4) !important;
-    height: 3rem;
-    border-radius: 50%;
-    
-    }
-    
-    .prev{
-        outline: none;  
-        transform: translateX(-100%);
-        width: 3rem;
-        font-size: 1.2rem;
-        color: #D5293F!important;
-        font-weight: bold;
-        background-color: rgba(250, 249, 247, 0.4) !important;
-        height: 3rem;
-        border-radius: 50%;
-        
-        
-        
-    }
-    
-    .pagingDots{
-         display: none;
-        
-        
-        &:active{
-            fill: #cc0226 !important;
-            background-color: #cc0226 !important;
-        }
-    }
+.prev {
+  outline: none;
+  transform: translateX(-100%);
+  width: 3rem;
+  font-size: 1.2rem;
+  color: #d5293f !important;
+  font-weight: bold;
+  background-color: rgba(250, 249, 247, 0.4) !important;
+  height: 3rem;
+  border-radius: 50%;
+}
 
-    .viewBtn{
-        display: block;
-        width: 7rem;
-        height: 2rem;
-        margin: 3rem auto;
-        font-weight: 600;
-        background-color: var(--dark-white-color);
-        border-radius: 10px;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        .arrows{
-            color:var(--primary-color);
-            font-size: 1rem;
-        }
+.pagingDots {
+  display: none;
+
+  &:active {
+    fill: #cc0226 !important;
+    background-color: #cc0226 !important;
+  }
+}
+
+.viewBtn {
+  display: block;
+  width: 7rem;
+  height: 2rem;
+  margin: 3rem auto;
+  font-weight: 600;
+  background-color: var(--dark-white-color);
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--primary-color);
+    color: white;
+    .arrows {
+      color: white;
     }
+  }
+  .arrows {
+    display: inline-block;
+    transform: translateY(0.1rem);
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-left: 0.2rem;
+  }
+}

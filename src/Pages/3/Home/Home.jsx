@@ -13,51 +13,65 @@ import CartSidebar from "../../../Components/3/cartSidebar/cartSidebar";
 import MenuSidebar from "../../../Components/3/menuSidebar/menuSidebar";
 
 class Home extends Component {
-    state={
-        cartItems:[],
-        showCart:false,
-        showUser:false,
-        showMenuSidebar:false
+  state = {
+    cartItems: [],
+    showCart: false,
+    showUser: false,
+    showMenuSidebar: false,
+  };
 
-    }
+  showCartClosedHandler = () => {
+    this.setState({ showCart: false });
+  };
+  showCartToggleHandler = () => {
+    this.setState((prevState) => {
+      return { showCart: !prevState.showCart };
+    });
+  };
 
-    showCartClosedHandler=()=>{
-        this.setState({showCart:false})
-    }
-    showCartToggleHandler =()=>{
-      this.setState((prevState) => {return {showCart: !prevState.showCart}})
+  showMenuSidebarClosedHandler = () => {
+    this.setState({ showMenuSidebar: false });
+  };
+  showMenuSidebarToggleHandler = () => {
+    this.setState((prevState) => {
+      return { showMenuSidebar: !prevState.showMenuSidebar };
+    });
+  };
+
+  addItemToCart = (item) => {
+    const cartItems = [...this.state.cartItems];
+    cartItems.push(item);
+    this.setState({ cartItems });
+  };
+  render() {
+    return (
+      <div className={styles.Home}>
+        <Menu
+          showMenuSidebar={this.showMenuSidebarToggleHandler}
+          toggleUser={this.toggleUserHandler}
+          showUserDropdown={this.state.showUser}
+          showCart={this.showCartToggleHandler}
+        />
+        <Showcase />
+        <ProductsOverview addItem={(item) => this.addItemToCart(item)} />
+        <BrandsCollection />
+        <AllProducts addItem={(item) => this.addItemToCart(item)} />
+        <VrPlaceholder />
+        <LogoSlider />
+        <Branches />
+        <Footer />
+        <CartSidebar
+          open={this.state.showCart}
+          closed={this.showCartClosedHandler}
+          cart={this.state.cartItems}
+        />
+        <MenuSidebar
+          open={this.state.showMenuSidebar}
+          closed={this.showMenuSidebarClosedHandler}
+        />
+      </div>
+    );
   }
-   
-  showMenuSidebarClosedHandler=()=>{
-    this.setState({showMenuSidebar:false})
-} 
-showMenuSidebarToggleHandler =()=>{
-      this.setState((prevState) => {return {showMenuSidebar: !prevState.showMenuSidebar}})
-  }
-    
-    addItemToCart=(item)=>{
-        const cartItems=[...this.state.cartItems]
-        cartItems.push(item);
-        this.setState({cartItems})
-      }
-    render(){
-        return(
-            <div className={styles.Home}>
-        <Menu showMenuSidebar={this.showMenuSidebarToggleHandler} toggleUser={this.toggleUserHandler} showUserDropdown={this.state.showUser} showCart={this.showCartToggleHandler}/>
-        <Showcase/>
-        <ProductsOverview addItem={(item)=>this.addItemToCart(item)}/>
-        <BrandsCollection/>
-        <AllProducts addItem={(item)=>this.addItemToCart(item)}/>
-        <VrPlaceholder/>
-        <LogoSlider/>
-        <Branches/>
-        <Footer/>
-        <CartSidebar open={this.state.showCart} closed={this.showCartClosedHandler} cart={this.state.cartItems}/>
-        <MenuSidebar open={this.state.showMenuSidebar} closed={this.showMenuSidebarClosedHandler} />
-        
-    </div>
-        )
-    }
 }
 
-export default Home
+export default Home;

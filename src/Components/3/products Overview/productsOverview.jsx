@@ -1,89 +1,137 @@
 import React, { Component } from "react";
 import styles from "./productsOverview.module.scss";
-import Carousel from 'nuka-carousel';
-import Card from "../card/card"
+import Carousel from "nuka-carousel";
+import Card from "../card/card";
 
-import productimg1 from "../../../assets/products/Component1.png"
-import productimg2 from "../../../assets/products/Component2.png"
-import productimg3 from "../../../assets/products/Component3.png"
-import productimg4 from "../../../assets/products/Component4.png"
+import productimg2 from "../../../assets/products/Component2.png";
+import productimg3 from "../../../assets/products/Component3.png";
+import productimg4 from "../../../assets/products/Component4.png";
 class ProductsOverview extends Component {
-    state={
-        products : [
-            {id:1,imgURL:productimg1,title:"Wanted set EDT 100 ML +  ",brand:"AZZARO" , price:"1,900 EGP"},
-            {id:2,imgURL:productimg2,title:"Clarins Super restorative total eye CO",brand:"CLARINS" , price:"1,750 EGP" , oldPrice:"2000 EGP"},
-            {id:3,imgURL:productimg3,title:"Armani code absolu homme EDP 110 ML Deo Spray ...",brand:"GIORGIO ARMANI" , price:"2,599 EGP"},
-            {id:4,imgURL:productimg4,title:"Givenchy make-up le rouge NO. 306 ",brand:"GIVENCHY" , price:"835 EGP" ,oldPrice:"1,000 EGP"},
-            {id:5,imgURL:productimg1,title:"Wanted set EDT 100 ML + ",brand:"AZZARO" , price:"1,900 EGP"},
-            {id:6,imgURL:productimg3,title:"Armani code absolu homme EDP 110 ML Deo Spray ...",brand:"GIORGIO ARMANI" , price:"2,599 EGP"}
-        ]
-    }
-    render(){
-        return (
-                <div className={styles.productsOverview}>
-                    <div className={styles.newArrivals}>
-                        
-                        <h3 className={styles.header}>New Arrivals</h3>
-                        <div className={styles.categories}>
-                        <span className={styles.category}>Women</span>
-                        <span className={styles.category}>Men</span>
-                        </div>
-                        
+  state = {
+    products: [
+      {
+        id: 1,
+        imgURL: productimg2,
+        title: "Clarins Super restorative total eye CO",
+        brand: "CLARINS",
+        price: "1,750 EGP",
+        oldPrice: "2000 EGP",
+      },
+      {
+        id: 2,
+        imgURL: productimg3,
+        title: "Armani code absolu homme EDP 110 ML Deo Spray ...",
+        brand: "GIORGIO ARMANI",
+        price: "2,599 EGP",
+      },
+      {
+        id: 3,
+        imgURL: productimg4,
+        title: "Givenchy make-up le rouge NO. 306 ",
+        brand: "GIVENCHY",
+        price: "835 EGP",
+        oldPrice: "1,000 EGP",
+      },
+      {
+        id: 4,
+        imgURL: productimg3,
+        title: "Armani code absolu homme EDP 110 ML Deo Spray ...",
+        brand: "GIORGIO ARMANI",
+        price: "2,599 EGP",
+      },
+      {
+        id: 5,
+        imgURL: productimg4,
+        title: "Givenchy make-up le rouge NO. 306 ",
+        brand: "GIVENCHY",
+        price: "835 EGP",
+        oldPrice: "1,000 EGP",
+      },
+    ],
+  };
+  render() {
+    return (
+      <div className={styles.productsOverview}>
+        <div className={styles.newArrivals}>
+          <h3 className={styles.header}>New Arrivals</h3>
+          <div className={styles.categories}>
+            <span className={styles.category}>Women</span>
+            <span className={styles.category}>Men</span>
+          </div>
 
-                        <Carousel
-                        slidesToShow={4}
-                        autoplay
-                        wrapAround
-                        defaultControlsConfig={{
-                            containerClassName:`${styles.container}`,
-                            nextButtonText:">",
-                            prevButtonText:"<",
-                            prevButtonClassName:`${styles.prev}`,
-                            nextButtonClassName:`${styles.next}`,
-                            pagingDotsClassName:`${styles.pagingDots}`,
-                            pagingDotsContainerClassName:`${styles.pagingContainer}`
-                           
-                        }}
-                        >
-                            {this.state.products.map(item=>(
-                                <Card key={item.id} addToCart={()=>this.props.addItem(item)} discount imgURL={item.imgURL} title={item.title} brand={item.brand} price={item.price} oldPrice={item.oldPrice}/>
-                            ))}
-                        </Carousel>
-                        <button className={styles.viewBtn}>View all  <span className={styles.arrows}>>></span></button>
-                    </div>
-                    <div className={styles.newArrivals}>
-                        
-                        <h3 className={styles.header}>Best Seller</h3>
-                        <div className={styles.categories}>
-                        <span className={styles.category}>Women</span>
-                        <span className={styles.category}>Men</span>
-                        </div>
-                        
+          <Carousel
+            slidesToShow={4}
+            autoplay
+            autoplayInterval="2000"
+            wrapAround
+            defaultControlsConfig={{
+              containerClassName: `${styles.container}`,
+              nextButtonText: ">",
+              prevButtonText: "<",
+              prevButtonClassName: `${styles.prev}`,
+              nextButtonClassName: `${styles.next}`,
+              pagingDotsClassName: `${styles.pagingDots}`,
+              pagingDotsContainerClassName: `${styles.pagingContainer}`,
+            }}
+          >
+            {this.state.products.map((item) => (
+              <Card
+                key={item.id}
+                addToCart={() => this.props.addItem(item)}
+                discount
+                imgURL={item.imgURL}
+                title={item.title}
+                brand={item.brand}
+                price={item.price}
+                oldPrice={item.oldPrice}
+              />
+            ))}
+          </Carousel>
+          <button className={styles.viewBtn}>
+            View all <span className={styles.arrows}>{">>"}</span>
+          </button>
+        </div>
+        <div className={styles.newArrivals}>
+          <h3 className={styles.header}>Best Seller</h3>
+          <div className={styles.categories}>
+            <span className={styles.category}>Women</span>
+            <span className={styles.category}>Men</span>
+          </div>
 
-                        <Carousel
-                        slidesToShow={4}
-                        autoplay
-                        wrapAround
-                        defaultControlsConfig={{
-                            containerClassName:`${styles.container}`,
-                            nextButtonText:">",
-                            prevButtonText:"<",
-                            prevButtonClassName:`${styles.prev}`,
-                            nextButtonClassName:`${styles.next}`,
-                            pagingDotsClassName:`${styles.pagingDots}`,
-                            pagingDotsContainerClassName:`${styles.pagingContainer}`
-                           
-                        }}
-                        >
-                            {this.state.products.map(item=>(
-                                <Card key={item.id} addToCart={()=>this.props.addItem(item)} discount imgURL={item.imgURL} title={item.title} brand={item.brand} price={item.price} oldPrice={item.oldPrice}/>
-                            ))}
-                        </Carousel>
-                        <button className={styles.viewBtn}>View all  <span className={styles.arrows}>>></span></button>
-                    </div>
-                </div>
-        )
-    }
+          <Carousel
+            slidesToShow={4}
+            autoplay
+            wrapAround
+            defaultControlsConfig={{
+              containerClassName: `${styles.container}`,
+              nextButtonText: ">",
+              prevButtonText: "<",
+              prevButtonClassName: `${styles.prev}`,
+              nextButtonClassName: `${styles.next}`,
+              pagingDotsClassName: `${styles.pagingDots}`,
+              pagingDotsContainerClassName: `${styles.pagingContainer}`,
+            }}
+          >
+            {this.state.products.map((item) => (
+              <Card
+                key={item.id}
+                addToCart={() => this.props.addItem(item)}
+                discount
+                imgURL={item.imgURL}
+                title={item.title}
+                brand={item.brand}
+                price={item.price}
+                oldPrice={item.oldPrice}
+              />
+            ))}
+          </Carousel>
+          <button className={styles.viewBtn}>
+            View all <span className={styles.arrows}>{">>"}</span>
+          </button>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default ProductsOverview
+export default ProductsOverview;

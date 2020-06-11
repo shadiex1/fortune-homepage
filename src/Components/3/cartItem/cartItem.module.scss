@@ -1,47 +1,47 @@
-.item{
-    padding: 1rem;
-    border-bottom: 1px solid var(--light-secondary-color);
-    .itemInfo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img{
-            width: 20%;
-            object-fit: contain;
-            height: 100%;
-            border: 1px solid var(--dark-secondary-color);
-            border-radius: 10px;
-            margin-right: .5rem;
-        }
-        .description{
-            width: 90%;
-            font-size: .8rem;
-            .brand{
-                color: var(--primary-color);
-            }
-        }
+.item {
+  padding: 1rem;
+  border-bottom: 1px solid var(--light-secondary-color);
+  .itemInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 20%;
+      object-fit: contain;
+      height: 100%;
+      border: 1px solid var(--dark-secondary-color);
+      border-radius: 10px;
+      margin-right: 0.5rem;
     }
-    .price{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        span{
-            color:var(--dark-secondary-color)
-        }
-        .quantity{
-            border: 1px solid #AFAFAF;
-            border-radius: 10px;
-            .sign{
-                color: var(--primary-color);
-                font-size: 1.2rem;
-                font-weight: bold;
-            }
-            .number{
-                font-size: 1.2rem;
-            }
-            span{
-                margin: 1rem;
-            }
-        }
+    .description {
+      width: 90%;
+      font-size: 0.8rem;
+      .brand {
+        color: var(--primary-color);
+      }
     }
+  }
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      color: var(--dark-secondary-color);
+    }
+    .quantity {
+      border: 1px solid #afafaf;
+      border-radius: 10px;
+      .sign {
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      .number {
+        font-size: 1.2rem;
+      }
+      span {
+        margin: 1rem;
+      }
+    }
+  }
 }
