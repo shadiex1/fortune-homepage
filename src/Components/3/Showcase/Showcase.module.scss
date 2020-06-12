@@ -35,7 +35,7 @@
   background-color:var(--secondary-color) !important;
   transform: scale(0.8);
 
-  &:active {
+  &:hover , &:active {
     fill: var(--primary-color) !important;
     background-color: var(--primary-color) !important;
   }

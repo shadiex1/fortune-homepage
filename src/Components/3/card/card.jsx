@@ -8,9 +8,9 @@ const Card = (props) => (
     <span className={styles.title}>{props.title}</span>
     <span className={styles.brand}>{props.brand}</span>
     <div className={styles.priceContainer}>
-      <span className={styles.price}>{props.price}</span>
+      <span className={styles.price}>{props.price} EGP</span>
       {props.discount ? (
-        <span className={styles.oldPrice}>{props.oldPrice}</span>
+        <span className={styles.oldPrice}>{props.oldPrice} EGP</span>
       ) : null}
     </div>
     <div className={styles.cartContainer}>

@@ -14,38 +14,46 @@ class ProductsOverview extends Component {
         imgURL: productimg2,
         title: "Clarins Super restorative total eye CO",
         brand: "CLARINS",
-        price: "1,750 EGP",
-        oldPrice: "2000 EGP",
+        price: 1750,
+        oldPrice: 2000,
+        discount:true,
+        quantity:1
       },
       {
         id: 2,
         imgURL: productimg3,
         title: "Armani code absolu homme EDP 110 ML Deo Spray ...",
         brand: "GIORGIO ARMANI",
-        price: "2,599 EGP",
+        price: 2599,
+        quantity:1
       },
       {
         id: 3,
         imgURL: productimg4,
         title: "Givenchy make-up le rouge NO. 306 ",
         brand: "GIVENCHY",
-        price: "835 EGP",
-        oldPrice: "1,000 EGP",
+        price: 835,
+        oldPrice: 1000,
+        discount:true,
+        quantity:1
       },
       {
         id: 4,
         imgURL: productimg3,
         title: "Armani code absolu homme EDP 110 ML Deo Spray ...",
         brand: "GIORGIO ARMANI",
-        price: "2,599 EGP",
+        price: 2599,
+        quantity:1
       },
       {
         id: 5,
         imgURL: productimg4,
         title: "Givenchy make-up le rouge NO. 306 ",
         brand: "GIVENCHY",
-        price: "835 EGP",
-        oldPrice: "1,000 EGP",
+        price: 835,
+        oldPrice: 1000 ,
+        discount:true,
+        quantity:1
       },
     ],
   };
@@ -78,7 +86,7 @@ class ProductsOverview extends Component {
               <Card
                 key={item.id}
                 addToCart={() => this.props.addItem(item)}
-                discount
+                discount={item.discount}
                 imgURL={item.imgURL}
                 title={item.title}
                 brand={item.brand}
@@ -116,7 +124,7 @@ class ProductsOverview extends Component {
               <Card
                 key={item.id}
                 addToCart={() => this.props.addItem(item)}
-                discount
+                discount={item.discount}
                 imgURL={item.imgURL}
                 title={item.title}
                 brand={item.brand}

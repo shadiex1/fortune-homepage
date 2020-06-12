@@ -40,7 +40,21 @@ class Home extends Component {
 
   addItemToCart = (item) => {
     const cartItems = [...this.state.cartItems];
-    cartItems.push(item);
+
+    const existingCartItem = cartItems.find(
+      cartItem => cartItem.title === item.title
+    );
+  
+    if (existingCartItem) {
+      return cartItems.map(cartItem =>
+        cartItem.title === item.title
+          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          : cartItem
+      );
+    } cartItems.push(item);
+
+
+   
     this.setState({ cartItems });
   };
   render() {

@@ -31,6 +31,8 @@ const cartSidebar = (props) => {
                 brand={cartItem.brand}
                 imgURL={cartItem.imgURL}
                 price={cartItem.price}
+                quantity={cartItem.quantity}
+                add={props.increaseQuantity}
               />
             ))
           ) : (

@@ -15,60 +15,72 @@ class AllProducts extends Component {
         imgURL: productimg1,
         title: "Wanted set EDT 100 ML +  ",
         brand: "AZZARO",
-        price: "1,900 EGP",
+        price: 1900,
+        quantity:1
       },
       {
         id: 2,
         imgURL: productimg2,
         title: "Clarins Super restorative total eye CO",
         brand: "CLARINS",
-        price: "1,750 EGP",
-        oldPrice: "2000 EGP",
+        price: 1750,
+        oldPrice: 2000,
+        discount:true,
+        quantity:1
       },
       {
         id: 3,
         imgURL: productimg3,
         title: "Armani code absolu homme EDP 110 ML Deo Spray ...",
         brand: "GIORGIO ARMANI",
-        price: "2,599 EGP",
+        price: 2599 ,
+        quantity:1
       },
       {
         id: 4,
         imgURL: productimg4,
         title: "Givenchy make-up le rouge NO. 306 ",
         brand: "GIVENCHY",
-        price: "835 EGP",
-        oldPrice: "1,000 EGP",
+        price: 835,
+        oldPrice: 1000,
+        discount:true,
+        quantity:1
       },
       {
         id: 5,
         imgURL: productimg1,
         title: "Wanted set EDT 100 ML +  ",
         brand: "AZZARO",
-        price: "1,900 EGP",
+        price: 1900,
+        quantity:1
       },
       {
         id: 6,
         imgURL: productimg2,
         title: "Clarins Super restorative total eye CO",
         brand: "CLARINS",
-        price: "1,750 EGP",
-        oldPrice: "2000 EGP",
+        price: 1750,
+        oldPrice: 2000,
+        discount:true,
+        quantity:1
       },
       {
         id: 7,
         imgURL: productimg3,
         title: "Armani code absolu homme EDP 110 ML Deo Spray ...",
         brand: "GIORGIO ARMANI",
-        price: "2,599 EGP",
+        price: 2599,
+        quantity:1
       },
       {
         id: 8,
         imgURL: productimg4,
         title: "Givenchy make-up le rouge NO. 306 ",
         brand: "GIVENCHY",
-        price: "835 EGP",
-        oldPrice: "1,000 EGP",
+        price: 835,
+        oldPrice: 1000,
+        discount:true,
+        quantity:1
       },
     ],
   };
@@ -81,7 +93,7 @@ class AllProducts extends Component {
             <Card
               addToCart={() => this.props.addItem(item)}
               key={item.id}
-              discount
+              discount={item.discount}
               imgURL={item.imgURL}
               title={item.title}
               brand={item.brand}

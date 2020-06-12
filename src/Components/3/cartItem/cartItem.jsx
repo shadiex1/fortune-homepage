@@ -12,10 +12,10 @@ const cartItem = (props) => (
       </div>
     </div>
     <div className={styles.price}>
-      <span>{props.price}</span>
+      <span>{props.price * props.quantity} EGP</span>
       <div className={styles.quantity}>
-        <span className={styles.sign}>-</span>
-        <span className={styles.number}>{props.quantity}3</span>
+        <span onClick={props.add} className={styles.sign}>-</span>
+        <span className={styles.number}>{props.quantity}</span>
         <span className={styles.sign}>+</span>
       </div>
     </div>

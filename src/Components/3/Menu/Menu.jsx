@@ -3,6 +3,7 @@ import styles from "./Menu.module.scss";
 import logo from "../../../assets/menu/Rectangle.png";
 import UserDropdown from "../userDropdown/userDropdown";
 import NavDropdown from "../navDropdown/navDropdown";
+import Searchbar from "../seachbar/searchbar"
 import { ReactComponent as SearchIcon } from "../../../assets/icons/search.svg";
 import { ReactComponent as CartIcon } from "../../../assets/icons/shopper.svg";
 import { ReactComponent as UserIcon } from "../../../assets/icons/user.svg";
@@ -12,11 +13,17 @@ class Menu extends Component {
   state = {
     showNavDropdown: false,
     showUser: false,
+    showSearchbar:false,
   };
 
   navDropdownToggleHandler = () => {
     this.setState((prevState) => {
       return { showNavDropdown: !prevState.showNavDropdown };
+    });
+  };
+  searchbarToggleHandler = () => {
+    this.setState((prevState) => {
+      return { showSearchbar: !prevState.showSearchbar };
     });
   };
   userToggleHandler = () => {
@@ -33,12 +40,12 @@ class Menu extends Component {
             closed={this.userToggleHandler}
           />
         ) : null}
-        <div className={styles.banner}>
+        {this.state.showSearchbar ? <Searchbar closed={this.searchbarToggleHandler}/> : <div className={styles.banner}>
           <div>
             <img src={logo} alt="logo" />
             <ul>
               <li>
-                <SearchIcon />
+                <SearchIcon onClick={this.searchbarToggleHandler}/>
               </li>
               <li>
                 <UserIcon onClick={this.userToggleHandler} />
@@ -51,7 +58,7 @@ class Menu extends Component {
               </li>
             </ul>
           </div>
-        </div>
+        </div> }
         <nav className={styles.nav}>
           <ul>
             <div
@@ -74,6 +81,7 @@ class Menu extends Component {
           <NavDropdown
             open={this.state.showNavDropdown}
             closed={this.navDropdownToggleHandler}
+
           />
         ) : null}
       </div>

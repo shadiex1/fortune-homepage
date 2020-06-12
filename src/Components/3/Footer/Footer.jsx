@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./Footer.module.scss";
 import logo from "../../../assets/menu/Rectangle.png";
 import nasNavLogo from "../../../assets/Rectangle134.png";
+import { ReactComponent as FacebookIcon } from "../../../assets/icons/facebookfooter.svg";
+import { ReactComponent as InstagramIcon } from "../../../assets/icons/instagramfooter.svg";
 
 const footer = () => (
   <div className={styles.footer}>
@@ -23,8 +25,8 @@ const footer = () => (
           11907 - 154 st., Cairo, Egypt. +2 (123) 456 7890 info@fotune.com.eg
         </p>
         <div className={styles.icons}>
-          <i className="fab fa-facebook-square"></i>
-          <i className="fab fa-instagram"></i>
+          <FacebookIcon/>
+          <InstagramIcon/>
         </div>
       </div>
     </div>
