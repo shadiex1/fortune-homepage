@@ -73,7 +73,7 @@ class Home extends Component {
         <VrPlaceholder />
         <LogoSlider />
         <Branches />
-        <Footer />
+        <Footer org={this.props.org}/>
         <CartSidebar
           open={this.state.showCart}
           closed={this.showCartClosedHandler}

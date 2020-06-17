@@ -2,9 +2,7 @@ import React from "react";
 import styles from "./brandsCollection.module.scss";
 import Carousel from "nuka-carousel";
 
-import brands1 from "../../../assets/brands/MaskGroup4.png";
-import brands2 from "../../../assets/brands/MaskGroup5.png";
-import brands3 from "../../../assets/brands/MaskGroup6.png";
+
 
 const brandsCollection = () => (
   <div className={styles.brands}>
@@ -12,7 +10,7 @@ const brandsCollection = () => (
     <Carousel
       wrapAround
       autoplay
-      slidesToShow={3}
+      slidesToShow={1}
       defaultControlsConfig={{
         containerClassName: `${styles.container}`,
         nextButtonText: ">",
@@ -23,11 +21,10 @@ const brandsCollection = () => (
         pagingDotsContainerClassName: `${styles.pagingContainer}`,
       }}
     >
-      <img src={brands1} alt="brand"></img>
-      <img src={brands2} alt="brand"></img>
-      <img src={brands3} alt="brand"></img>
-      <img src={brands2} alt="brand"></img>
-      <img src={brands1} alt="brand"></img>
+      <img src="/images/fortune/missingImages/brands/MaskGroup4.png" alt="brand"></img>
+      <img src="/images/fortune/missingImages/brands/MaskGroup4.png" alt="brand"></img>
+    
+      
     </Carousel>
   </div>
 );

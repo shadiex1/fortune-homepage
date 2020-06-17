@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./menuSidebar.module.scss";
 import Backdrop from "../backdrop/backdrop";
 import logo from "../../../assets/menu/Rectangle.png";
+import data from "../../../services/missingData.json"
 import {
   Accordion,
   AccordionItem,
@@ -25,70 +26,69 @@ const menuSidebar = (props) => {
         </div>
         <Accordion allowMultipleExpanded>
           <div className={styles.menu}>
-            <div className={styles.header}>
-              <span>Fragrance</span>
+            {data.navigation.slice(0,1).map(item=>(
+              <div className={styles.header}>
+              <span>{item}</span>
               <i className="fas fa-chevron-down"></i>
             </div>
-            <AccordionItem>
+            ))}
+
+            {data.navigation.slice(1,2).map(
+              item=>(
+                 <AccordionItem>
               <AccordionItemHeading>
                 <AccordionItemButton style={{ outline: "none" }}>
                   <div className={styles.header}>
-                    <span>Makeup</span>
+                    <span>{item}</span>
                     <i className="fas fa-chevron-down"></i>
                   </div>
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
-                <AccordionItem>
-                  <AccordionItemHeading>
+                <AccordionItem><AccordionItemHeading>
                     <AccordionItemButton style={{ outline: "none" }}>
-                      <div className={styles.subHeader}>
-                        <span>Face</span>
+                      
+                        {data.subNavigation.slice(0,1).map(item=>(<div className={styles.subHeader}>
+                           <span>{item}</span>
                         <i className="fas fa-chevron-down"></i>
-                      </div>
+                         </div>)
+                          )}
+                       
+                     
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <div className={styles.baseItem}>
-                      <span>All</span>
-                      <span>Foundation</span>
-                      <span>BB cream</span>
-                      <span>Concealer</span>
-                      <span>Fixer</span>
-                      <span>General</span>
-                      <span>Loose powder</span>
-                      <span>Makeup remover</span>
-                      <span>Primer</span>
+                      {data.baseNavItems.map(item=>(
+                        <span>{item}</span>
+                      ))}
+                      
                     </div>
                   </AccordionItemPanel>
                 </AccordionItem>
               </AccordionItemPanel>
               <AccordionItemPanel>
-                <div className={styles.subHeader}>
-                  <span>Lips</span>
+                {data.subNavigation.slice(1,3).map(item=>(
+                   <div className={styles.subHeader}>
+                  <span>{item}</span>
                   <i className="fas fa-chevron-down"></i>
                 </div>
+                ))}
+               
               </AccordionItemPanel>
-              <AccordionItemPanel>
-                <div className={styles.subHeader}>
-                  <span>Eyes</span>
-                  <i className="fas fa-chevron-down"></i>
-                </div>
-              </AccordionItemPanel>
+              
             </AccordionItem>
-            <div className={styles.header}>
-              <span>Skin Care</span>
-              <i className="fas fa-chevron-down"></i>
+              )
+            )}
+            
+           
+              {data.navigation.slice(2,6).map(item=>(
+                <div className={styles.header}>
+              <span>{item}</span>
             </div>
-            <div className={styles.header}>
-              <span>Brands</span>
-            </div>
-            <div className={styles.header}>
-              <span>New Arrivals</span>
-            </div>
-            <div className={styles.header}>
-              <span>Best Seller</span>
-            </div>
+              ))}    
+            
+            
           </div>
         </Accordion>
       </div>

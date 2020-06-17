@@ -2,62 +2,47 @@ import React, { Component } from "react";
 import styles from "./productsOverview.module.scss";
 import Carousel from "nuka-carousel";
 import Card from "../card/card";
+import data from "../../../services/missingData.json";
+import { useMediaQuery } from 'react-responsive'
 
-import productimg2 from "../../../assets/products/Component2.png";
-import productimg3 from "../../../assets/products/Component3.png";
-import productimg4 from "../../../assets/products/Component4.png";
+
 class ProductsOverview extends Component {
   state = {
-    products: [
-      {
-        id: 1,
-        imgURL: productimg2,
-        title: "Clarins Super restorative total eye CO",
-        brand: "CLARINS",
-        price: 1750,
-        oldPrice: 2000,
-        discount:true,
-        quantity:1
-      },
-      {
-        id: 2,
-        imgURL: productimg3,
-        title: "Armani code absolu homme EDP 110 ML Deo Spray ...",
-        brand: "GIORGIO ARMANI",
-        price: 2599,
-        quantity:1
-      },
-      {
-        id: 3,
-        imgURL: productimg4,
-        title: "Givenchy make-up le rouge NO. 306 ",
-        brand: "GIVENCHY",
-        price: 835,
-        oldPrice: 1000,
-        discount:true,
-        quantity:1
-      },
-      {
-        id: 4,
-        imgURL: productimg3,
-        title: "Armani code absolu homme EDP 110 ML Deo Spray ...",
-        brand: "GIORGIO ARMANI",
-        price: 2599,
-        quantity:1
-      },
-      {
-        id: 5,
-        imgURL: productimg4,
-        title: "Givenchy make-up le rouge NO. 306 ",
-        brand: "GIVENCHY",
-        price: 835,
-        oldPrice: 1000 ,
-        discount:true,
-        quantity:1
-      },
-    ],
+   data,
+   width:  800,
+    height: 182
   };
+
+  updateDimensions() {
+    if(window.innerWidth < 500) {
+      this.setState({ width: 450, height: 102 });
+    } else {
+      let update_width  = window.innerWidth-100;
+      let update_height = Math.round(update_width/4.4);
+      this.setState({ width: update_width, height: update_height });
+    }
+  }
+
+  /**
+   * Add event listener
+   */
+  componentDidMount() {
+    this.updateDimensions();
+    window.addEventListener("resize", this.updateDimensions.bind(this));
+  }
+
+  /**
+   * Remove event listener
+   */
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions.bind(this));
+  }
   render() {
+    let slides=0
+    this.state.width <= 1100 ?  slides=4 :  slides = 4
+    this.state.width <= 800 ?  slides=3:  slides = 2
+    this.state.width <= 600 ?  slides=2:  slides = 1
+    
     return (
       <div className={styles.productsOverview}>
         <div className={styles.newArrivals}>
@@ -68,7 +53,7 @@ class ProductsOverview extends Component {
           </div>
 
           <Carousel
-            slidesToShow={4}
+            slidesToShow={slides}
             autoplay
             autoplayInterval="2000"
             wrapAround
@@ -82,7 +67,7 @@ class ProductsOverview extends Component {
               pagingDotsContainerClassName: `${styles.pagingContainer}`,
             }}
           >
-            {this.state.products.map((item) => (
+            {this.state.data.products.map((item) => (
               <Card
                 key={item.id}
                 addToCart={() => this.props.addItem(item)}
@@ -120,7 +105,7 @@ class ProductsOverview extends Component {
               pagingDotsContainerClassName: `${styles.pagingContainer}`,
             }}
           >
-            {this.state.products.map((item) => (
+            {this.state.data.products.map((item) => (
               <Card
                 key={item.id}
                 addToCart={() => this.props.addItem(item)}

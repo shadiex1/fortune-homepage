@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./navDropdown.module.scss";
-import categoryImg from "../../../assets/Image69.png";
 import Backdrop from "../backdrop/backdrop";
+import data from "../../../services/missingData.json"
 
 const navDropdown = (props) => (
   <React.Fragment>
@@ -11,44 +11,33 @@ const navDropdown = (props) => (
         <div className={styles.category}>
           <h3>FACE</h3>
           <ul>
-            <li>All</li>
-            <li>Foundation</li>
-            <li>BB cream</li>
-            <li>Concealer</li>
-            <li>Fixer</li>
-            <li>General</li>
-            <li>Loose powder</li>
-            <li>Makeup remover</li>
-            <li>Primer</li>
+            {data.baseNavItems.map(item=>(
+              <li>{item}</li>
+            ))}
           </ul>
         </div>
         <div className={styles.category}>
           <h3>LIPS</h3>
           <ul>
-            <li>All</li>
-            <li>Foundation</li>
-            <li>BB cream</li>
-            <li>Concealer</li>
-            <li>Fixer</li>
+            
+            {data.baseNavItems.slice(0,5).map(item=>(
+              <li>{item}</li>
+            ))}
           </ul>
         </div>
         <div className={styles.category}>
           <h3>EYES</h3>
           <ul>
-            <li>All</li>
-            <li>Foundation</li>
-            <li>BB cream</li>
-            <li>Concealer</li>
-            <li>Fixer</li>
-            <li>General</li>
-            <li>Loose powder</li>
-            <li>Makeup remover</li>
+            
+            {data.baseNavItems.slice(0,7).map(item=>(
+              <li>{item}</li>
+            ))}
           </ul>
         </div>
       </div>
 
       <div className={styles.categoryImg}>
-        <img src={categoryImg} alt="category" />
+        <img src={"/images/fortune/missingImages/image69.png"} alt="category" />
       </div>
     </div>
   </React.Fragment>

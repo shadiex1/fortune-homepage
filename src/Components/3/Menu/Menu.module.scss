@@ -9,13 +9,41 @@
     background-color: white;
     border-bottom: 1px solid #e5e5e5;
     height: 5rem;
+    
 
     div {
+      .toggler {
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+        margin: 0;
+        span {
+          display: block;
+          width: 25px;
+          height: 3px;
+          margin-bottom: 5px;
+          position: relative;
+  
+          background: var(--secondary-color);
+          border-radius: 2px;
+  
+          z-index: 1;
+          cursor: pointer;
+  
+          &:nth-of-type(2) {
+            width: 20px;
+          }
+        }
+      }
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       width: 70%;
       margin: auto;
+      
+      img{
+        cursor: pointer;
+      }
 
       ul {
         li {
@@ -27,29 +55,15 @@
       }
     }
   }
-  .nav {
+ 
+      
+    .nav {
     width: 70%;
     margin: 6rem auto 0;
+    padding-bottom: 2rem;
 
-    .toggler {
-      span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin-bottom: 5px;
-        position: relative;
 
-        background: var(--secondary-color);
-        border-radius: 2px;
-
-        z-index: 1;
-        cursor: pointer;
-
-        &:nth-of-type(2) {
-          width: 20px;
-        }
-      }
-    }
+    
     ul {
       padding: 0;
       margin: 0;
@@ -62,11 +76,44 @@
         margin-left: 3rem;
         font-size: 1rem;
         font-weight: 700;
-        &:hover {
+        &:hover{
           color: var(--primary-color);
-          cursor: pointer;
+          cursor: pointer; 
+          .navDropdown{
+            display: block;
+          }
+          
         }
       }
     }
   }
+  .navDropdown{
+    display: none;
+  }
+  
+  
+}
+
+@media screen and (max-width:1300px){
+  .menu{
+   .banner{
+     div{
+       width: 90%;
+         ul{
+           width: 35rem;
+         }
+      
+     }
+   }
+}
+}
+
+@media screen and (max-width:1000px){
+.menu{
+  margin-bottom: 3rem;
+}
+
+.nav{
+  display: none;
+}
 }

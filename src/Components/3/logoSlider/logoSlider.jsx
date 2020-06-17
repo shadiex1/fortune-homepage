@@ -2,13 +2,7 @@ import React from "react";
 import styles from "./logoSlider.module.scss";
 import Carousel from "nuka-carousel";
 
-import logo1 from "../../../assets/logos/logo1.png";
-import logo2 from "../../../assets/logos/logo2.png";
-import logo3 from "../../../assets/logos/logo3.png";
-import logo4 from "../../../assets/logos/logo4.png";
-import logo5 from "../../../assets/logos/logo5.png";
-import logo6 from "../../../assets/logos/logo6.png";
-import logo7 from "../../../assets/logos/logo7.png";
+
 
 const logoSlider = () => (
   <div className={styles.logoSlider}>
@@ -26,13 +20,14 @@ const logoSlider = () => (
         pagingDotsContainerClassName: `${styles.pagingContainer}`,
       }}
     >
-      <img className={styles.logoImg} src={logo1} alt="logo" />
-      <img className={styles.logoImg} src={logo2} alt="logo" />
-      <img className={styles.logoImg} src={logo3} alt="logo" />
-      <img className={styles.logoImg} src={logo4} alt="logo" />
-      <img className={styles.logoImg} src={logo5} alt="logo" />
-      <img className={styles.logoImg} src={logo6} alt="logo" />
-      <img className={styles.logoImg} src={logo7} alt="logo" />
+      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo1.png" alt="logo" />
+      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo2.png" alt="logo" />
+      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo3.png" alt="logo" />
+      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo4.png" alt="logo" />
+      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo5.png" alt="logo" />
+      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo6.png" alt="logo" />
+      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo7.png" alt="logo" />
+  
     </Carousel>
   </div>
 );

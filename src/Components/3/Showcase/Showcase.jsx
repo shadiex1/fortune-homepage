@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Showcase.module.scss";
 import Carousel from "nuka-carousel";
-import carousel1 from "../../../assets/MaskGroup1.png";
 
 const Showcase = () => (
   <div className={styles.showcase}>
@@ -19,8 +18,8 @@ const Showcase = () => (
         pagingDotsContainerClassName: `${styles.pagingContainer}`,
       }}
     >
-      <img src={carousel1} alt="item" />
-      <img src={carousel1} alt="item" />
+      <img src="/images/fortune/missingImages/MaskGroup1.png" alt="item" />
+      <img src="/images/fortune/missingImages/MaskGroup1.png" alt="item" />
     </Carousel>
   </div>
 );

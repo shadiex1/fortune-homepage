@@ -1,28 +1,21 @@
 import React from "react";
 import styles from "./Footer.module.scss";
-import logo from "../../../assets/menu/Rectangle.png";
-import nasNavLogo from "../../../assets/Rectangle134.png";
 import { ReactComponent as FacebookIcon } from "../../../assets/icons/facebookfooter.svg";
 import { ReactComponent as InstagramIcon } from "../../../assets/icons/instagramfooter.svg";
-
+import data from "../../../services/missingData.json"
 const footer = () => (
   <div className={styles.footer}>
     <div className={styles.footerInfo}>
       <div className={styles.description}>
-        <img src={logo} alt="logo" />
+        <img src="/images/fortune/missingImages/menu/Rectangle.png" alt="logo" />
         <p>
-          Fortune stores are one of the leading retailers in the field of
-          perfumes, makeup and skin care, Fortune stores; Established in the
-          Egyptian market since 1997. Powered by its vast experience in beauty &
-          knowledge of client needs, Fortune offers professional and outstanding
-          service and consultancy to create a unique experience for each client.
-          Fortune….your world of beauty.
+          {data.footer.footerInfo}
         </p>
       </div>
       <div className={styles.contact}>
         <h3>Contact Us</h3>
         <p>
-          11907 - 154 st., Cairo, Egypt. +2 (123) 456 7890 info@fotune.com.eg
+          {data.footer.contactInfo}
         </p>
         <div className={styles.icons}>
           <FacebookIcon/>
@@ -34,7 +27,7 @@ const footer = () => (
     <div className={styles.copyrights}>
       <p>&copy; Fortune.Inc</p>
       <div className={styles.image}>
-        <span>Powerd by</span> <img src={nasNavLogo} alt="NasNav Logo" />
+        <span>Powerd by</span> <img src="/images/fortune/missingImages/Rectangle134.png" alt="NasNav Logo" />
       </div>
     </div>
   </div>
