@@ -3,13 +3,12 @@ import styles from "./productsOverview.module.scss";
 import Carousel from "nuka-carousel";
 import Card from "../card/card";
 import data from "../../../services/missingData.json";
-import { useMediaQuery } from 'react-responsive'
 
 
 class ProductsOverview extends Component {
   state = {
    data,
-   width:  800,
+   width:  1100,
     height: 182
   };
 
@@ -23,26 +22,30 @@ class ProductsOverview extends Component {
     }
   }
 
-  /**
-   * Add event listener
-   */
+
   componentDidMount() {
     this.updateDimensions();
     window.addEventListener("resize", this.updateDimensions.bind(this));
   }
 
-  /**
-   * Remove event listener
-   */
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateDimensions.bind(this));
   }
   render() {
-    let slides=0
-    this.state.width <= 1100 ?  slides=4 :  slides = 4
-    this.state.width <= 800 ?  slides=3:  slides = 2
-    this.state.width <= 600 ?  slides=2:  slides = 1
+    let slides=0    
     
+
+    this.state.width > 800 ?  slides=2:  slides = 3    
+     this.state.width > 1100 ?  slides=4 :  slides = 3
+
+     if (this.state.width > 1100 ){
+       slides=4
+     }else if (this.state.width > 800){
+       slides =3
+     }else if (this.state.width > 500){
+       slides=2
+     }else slides=1
+
     return (
       <div className={styles.productsOverview}>
         <div className={styles.newArrivals}>
@@ -92,7 +95,7 @@ class ProductsOverview extends Component {
           </div>
 
           <Carousel
-            slidesToShow={4}
+            slidesToShow={slides}
             autoplay
             wrapAround
             defaultControlsConfig={{

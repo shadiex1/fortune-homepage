@@ -40,3 +40,12 @@
     }
   }
 }
+
+@media screen and (max-width:800px){
+  .footerInfo {
+    flex-direction: column;
+  }
+  .copyrights{
+    flex-direction: column;
+  }
+}

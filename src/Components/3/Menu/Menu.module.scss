@@ -117,3 +117,10 @@
   display: none;
 }
 }
+@media screen and (max-width:500px){
+.banner{
+  div{
+    width:10vw;
+  }
+}
+}
