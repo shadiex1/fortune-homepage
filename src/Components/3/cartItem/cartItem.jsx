@@ -4,7 +4,7 @@ import styles from "./cartItem.module.scss";
 const cartItem = (props) => (
   <div className={styles.item}>
     <div className={styles.itemInfo}>
-      <img src={props.imgURL} alt="item" />
+      <img src={process.env.PUBLIC_URL+ props.imgURL} alt="item" />
       <div className={styles.description}>
         <span>{props.title}</span>
         <br />

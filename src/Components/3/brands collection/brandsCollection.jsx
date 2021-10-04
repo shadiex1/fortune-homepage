@@ -66,7 +66,7 @@ class brandsCollection  extends Component{
       }}
     >
       {data.brands.map(item=>(
-        <img src={`${item}`} alt="brand"/>
+        <img src={process.env.PUBLIC_URL+ item} alt="brand"/>
       ))}
     
       

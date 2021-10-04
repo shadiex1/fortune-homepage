@@ -4,7 +4,7 @@ import { ReactComponent as HeartIcon } from "../../../assets/icons/heart.svg";
 
 const Card = (props) => (
   <div className={styles.card}>
-    <img src={props.imgURL} alt="item" />
+    <img src={ process.env.PUBLIC_URL + props.imgURL} alt="item" />
     <span className={styles.title}>{props.title}</span>
     <span className={styles.brand}>{props.brand}</span>
     <div className={styles.priceContainer}>

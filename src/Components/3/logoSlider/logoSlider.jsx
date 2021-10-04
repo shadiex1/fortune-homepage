@@ -59,13 +59,13 @@ class logoSlider extends Component{
         pagingDotsContainerClassName: `${styles.pagingContainer}`,
       }}
     >
-      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo1.png" alt="logo" />
-      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo2.png" alt="logo" />
-      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo3.png" alt="logo" />
-      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo4.png" alt="logo" />
-      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo5.png" alt="logo" />
-      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo6.png" alt="logo" />
-      <img className={styles.logoImg} src="/images/fortune/missingImages/logos/logo7.png" alt="logo" />
+      <img className={styles.logoImg} src={process.env.PUBLIC_URL + "/images/fortune/missingImages/logos/logo1.png"} alt="logo" />
+      <img className={styles.logoImg} src={process.env.PUBLIC_URL +"/images/fortune/missingImages/logos/logo2.png" } alt="logo" />
+      <img className={styles.logoImg} src={process.env.PUBLIC_URL + "/images/fortune/missingImages/logos/logo3.png"} alt="logo" />
+      <img className={styles.logoImg} src={process.env.PUBLIC_URL + "/images/fortune/missingImages/logos/logo4.png"} alt="logo" />
+      <img className={styles.logoImg} src={process.env.PUBLIC_URL + "/images/fortune/missingImages/logos/logo5.png"}alt="logo" />
+      <img className={styles.logoImg} src={process.env.PUBLIC_URL + "/images/fortune/missingImages/logos/logo6.png"} alt="logo" />
+      <img className={styles.logoImg} src={process.env.PUBLIC_URL +"/images/fortune/missingImages/logos/logo7.png" } alt="logo" />
   
     </Carousel>
   </div>

@@ -48,7 +48,7 @@ class Menu extends Component {
               <span></span>
               <span></span>
             </div>
-            <img src={"/images/fortune/missingImages/menu/Rectangle.png"} alt="logo" />
+            <img src={process.env.PUBLIC_URL + "/images/fortune/missingImages/menu/Rectangle.png"} alt="logo" />
             </div>
             <ul className={styles.icons}>
               <li>

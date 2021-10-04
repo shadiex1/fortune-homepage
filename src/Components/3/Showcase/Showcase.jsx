@@ -18,8 +18,8 @@ const Showcase = () => (
         pagingDotsContainerClassName: `${styles.pagingContainer}`,
       }}
     >
-      <img src="/images/fortune/missingImages/MaskGroup1.png" alt="item" />
-      <img src="/images/fortune/missingImages/MaskGroup1.png" alt="item" />
+      <img src={process.env.PUBLIC_URL+"/images/fortune/missingImages/MaskGroup1.png"}  alt="item" />
+      <img src={process.env.PUBLIC_URL+"/images/fortune/missingImages/MaskGroup1.png"} alt="item" />
     </Carousel>
   </div>
 );

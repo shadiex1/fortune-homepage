@@ -7,7 +7,7 @@ const footer = () => (
   <div className={styles.footer}>
     <div className={styles.footerInfo}>
       <div className={styles.description}>
-        <img src="/images/fortune/missingImages/menu/Rectangle.png" alt="logo" />
+        <img src={process.env.PUBLIC_URL+"/images/fortune/missingImages/menu/Rectangle.png"} alt="logo" />
         <p>
           {data.footer.footerInfo}
         </p>
@@ -27,7 +27,7 @@ const footer = () => (
     <div className={styles.copyrights}>
       <p>&copy; Fortune.Inc</p>
       <div className={styles.image}>
-        <span>Powerd by</span> <img src="/images/fortune/missingImages/Rectangle134.png" alt="NasNav Logo" />
+        <span>Powerd by</span> <img src={process.env.PUBLIC_URL +"/images/fortune/missingImages/Rectangle134.png" }  alt="NasNav Logo" />
       </div>
     </div>
   </div>
