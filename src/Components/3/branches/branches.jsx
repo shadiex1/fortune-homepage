@@ -5,7 +5,7 @@ import { ReactComponent as MapIcon } from "../../../assets/icons/signs.svg";
 const branches = () => (
   <div className={styles.branches}>
     <div className={styles.description}>
-      <span>Furtune Stores</span>
+      <span>Fortune Stores</span>
     </div>
     <div className={styles.viewBranches}>
       <button className={styles.btn}>

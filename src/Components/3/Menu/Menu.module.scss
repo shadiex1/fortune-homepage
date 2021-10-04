@@ -1,5 +1,6 @@
 .menu {
   position: relative;
+  
   .banner {
     position: fixed;
     top: 0;
@@ -9,7 +10,11 @@
     background-color: white;
     border-bottom: 1px solid #e5e5e5;
     height: 5rem;
-    
+    .bannerContainer{
+      @media screen and (max-width:800px){
+        flex-direction: column;
+      }
+    }
 
     div {
       .toggler {
@@ -111,6 +116,30 @@
 @media screen and (max-width:1000px){
 .menu{
   margin-bottom: 3rem;
+  .banner{
+    height: 8rem;
+    .bannerContainer{
+      width: 100%;
+    }
+    .icons{
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+  }
+  .mobileContainer{
+    @media screen and (max-width:800px){
+      margin-top: 20px !important;
+      
+      .toggler{
+       justify-self: flex-start !important;
+      }
+      img{
+        display: block;
+        margin: auto;
+      }
+    }
+  }
 }
 
 .nav{

@@ -1,5 +1,8 @@
 .showcase {
   outline: none;
+  @media screen and (max-width:800px){
+    margin-top: 8rem;
+  }
 }
 
 .next {

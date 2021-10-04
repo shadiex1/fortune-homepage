@@ -43,7 +43,7 @@ class ProductsOverview extends Component {
      }else if (this.state.width > 800){
        slides =3
      }else if (this.state.width > 500){
-       slides=2
+       slides=1
      }else slides=1
 
     return (
@@ -58,7 +58,7 @@ class ProductsOverview extends Component {
           <Carousel
             slidesToShow={slides}
             autoplay
-            autoplayInterval="2000"
+            autoplayInterval="1000"
             wrapAround
             defaultControlsConfig={{
               containerClassName: `${styles.container}`,

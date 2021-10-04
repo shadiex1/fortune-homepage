@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./Home.module.scss";
+// import styles from "./Home.module.scss";
 import Menu from "../../../Components/3/Menu/Menu";
 import Showcase from "../../../Components/3/Showcase/Showcase";
 import ProductsOverview from "../../../Components/3/products Overview/productsOverview";
@@ -53,13 +53,14 @@ class Home extends Component {
       );
     } cartItems.push(item);
 
+    console.log(cartItems)
 
    
     this.setState({ cartItems });
   };
   render() {
     return (
-      <div className={styles.Home}>
+      <div >
         <Menu
           showMenuSidebar={this.showMenuSidebarToggleHandler}
           toggleUser={this.toggleUserHandler}

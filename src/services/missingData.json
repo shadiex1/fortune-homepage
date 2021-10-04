@@ -1,15 +1,8 @@
 
     {
-        "products" :[{
-        "id": 1,
-        "imgURL": "/images/fortune/missingImages/products/Component2.png",
-        "title": "Wanted set EDT 100 ML +  ",
-        "brand": "AZZARO",
-        "price": 1900,
-        "quantity":1
-      },
+        "products" :[
       {
-        "id": 2,
+        "id": 1,
         "imgURL": "/images/fortune/missingImages/products/Component2.png",
         "title": "Clarins Super restorative total eye CO",
         "brand": "CLARINS",
@@ -19,7 +12,7 @@
         "quantity":1
       },
       {
-        "id": 3,
+        "id": 2,
         "imgURL": "/images/fortune/missingImages/products/Component3.png",
         "title": "Armani code absolu homme EDP 110 ML Deo Spray ...",
         "brand": "GIORGIO ARMANI",
@@ -27,7 +20,7 @@
         "quantity":1
       },
       {
-        "id": 4,
+        "id":3,
         "imgURL": "/images/fortune/missingImages/products/Component4.png",
         "title": "Givenchy make-up le rouge NO. 306 ",
         "brand": "GIVENCHY",
@@ -36,16 +29,9 @@
         "discount":true,
         "quantity":1
       },
+      
       {
-        "id": 5,
-        "imgURL": "/images/fortune/missingImages/products/Component4.png",
-        "title": "Wanted set EDT 100 ML +  ",
-        "brand": "AZZARO",
-        "price": 1900,
-        "quantity":1
-      },
-      {
-        "id": 6,
+        "id": 4,
         "imgURL": "/images/fortune/missingImages/products/Component2.png",
         "title": "Clarins Super restorative total eye CO",
         "brand": "CLARINS",
@@ -55,7 +41,7 @@
         "quantity":1
       },
       {
-        "id": 7,
+        "id": 5,
         "imgURL": "/images/fortune/missingImages/products/Component3.png",
         "title": "Armani code absolu homme EDP 110 ML Deo Spray ...",
         "brand": "GIORGIO ARMANI",
@@ -63,7 +49,7 @@
         "quantity":1
       },
       {
-        "id": 8,
+        "id": 6,
         "imgURL": "/images/fortune/missingImages/products/Component4.png",
         "title": "Givenchy make-up le rouge NO. 306 ",
         "brand": "GIVENCHY",
@@ -84,6 +70,11 @@
       "footer":{
           "footerInfo":"Fortune stores are one of the leading retailers in the field of perfumes, makeup and skin care, Fortune stores; Established in the Egyptian market since 1997. Powered by its vast experience in beauty & knowledge of client needs, Fortune offers professional and outstanding service and consultancy to create a unique experience for each client. Fortune….your world of beauty.",
           "contactInfo":"11907 - 154 st., Cairo, Egypt. +2 (123) 456 7890 info@fotune.com.eg"
-      }
-    
+      },
+      "brands":[
+        "/images/fortune/missingImages/brands/MaskGroup4.png",
+        "/images/fortune/missingImages/brands/MaskGroup5.png",
+        "/images/fortune/missingImages/brands/MaskGroup6.png"
+
+      ]
       }

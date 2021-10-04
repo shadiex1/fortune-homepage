@@ -1,16 +1,17 @@
 .card {
   width: 12rem;
-  margin: auto;
-  padding: 1rem;
+  margin: auto 20px;
+  padding: 1rem 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  margin: auto;
   li {
     outline: none;
   }
   &:hover {
-    box-shadow: 0 3px 20px grey;
+    box-shadow: 0 2px 15px grey;
   }
   img {
     width: 100%;

@@ -1,8 +1,14 @@
 .productsOverview {
   width: 70%;
   margin: 3rem auto;
+  @media screen and (max-width:800px){
+    width: 100%;
+  }
   li {
     outline: none;
+  }
+  ul{
+    margin: 16px !important;
   }
   .newArrivals {
     display: flex;
@@ -20,6 +26,10 @@
       text-align: center;
       display: flex;
       justify-content: center;
+      @media screen and (max-width:800px){
+        // margin: auto;
+        margin:  2rem 0;
+      }
       .category {
         color: var(--secondary-color);
         border-bottom: 2px solid var(--light-secondary-color);
@@ -46,6 +56,9 @@
   background-color: rgba(var(--light-secondary-color), 0.4) !important;
   height: 3rem;
   border-radius: 50%;
+  @media screen and (max-width:800px){
+    transform: translateX(-20%);
+  }
 }
 
 .prev {
@@ -58,6 +71,9 @@
   background-color: rgba(250, 249, 247, 0.4) !important;
   height: 3rem;
   border-radius: 50%;
+  @media screen and (max-width:800px){
+    transform: translateX(20%);
+  }
 }
 
 .pagingDots {

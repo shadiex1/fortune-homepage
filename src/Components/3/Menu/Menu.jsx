@@ -38,8 +38,8 @@ class Menu extends Component {
           />
         ) : null}
         {this.state.showSearchbar ? <Searchbar closed={this.searchbarToggleHandler}/> : <div className={styles.banner}>
-          <div>
-            <div>
+          <div className={styles.bannerContainer}>
+            <div className={styles.mobileContainer}>
           <div
               onClick={this.props.showMenuSidebar}
               className={styles.toggler}
@@ -50,16 +50,16 @@ class Menu extends Component {
             </div>
             <img src={"/images/fortune/missingImages/menu/Rectangle.png"} alt="logo" />
             </div>
-            <ul>
+            <ul className={styles.icons}>
               <li>
                 <SearchIcon onClick={this.searchbarToggleHandler}/>
               </li>
-              <li>
+              {/* <li>
                 <UserIcon onClick={this.userToggleHandler} />
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <WishlistIcon />
-              </li>
+              </li> */}
               <li>
                 <CartIcon onClick={this.props.showCart} />
               </li>
