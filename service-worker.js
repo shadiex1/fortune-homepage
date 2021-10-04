@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/fortune-homepage/precache-manifest.4c671d28fa4ac057ed0eaae360dc040d.js"
+  "/fortune-homepage/precache-manifest.b3077dedfdc6e8c8ebb47856e43dcb5e.js"
 );
 
 self.addEventListener('message', (event) => {
