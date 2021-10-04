@@ -37,7 +37,7 @@ const navDropdown = (props) => (
       </div>
 
       <div className={styles.categoryImg}>
-        <img src={ process.env.PUBLIC_URL+"/images/fortune/missingImages/image69.png"} alt="category Image" />
+        <img src={ process.env.PUBLIC_URL+"/images/fortune/missingImages/Image69.png"} alt="category Image" />
       </div>
     </div>
   </React.Fragment>
