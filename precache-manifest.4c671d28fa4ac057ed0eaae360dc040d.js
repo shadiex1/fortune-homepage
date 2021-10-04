@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "43610cf2bd2539ee483c9e883db46415",
+    "revision": "856d27d9b496cb580442dfcc65033e23",
     "url": "/fortune-homepage/index.html"
   },
   {
-    "revision": "c37071fb909919d514de",
+    "revision": "22e768726eeebcc4d8e5",
     "url": "/fortune-homepage/static/css/main.1d9353c3.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fortune-homepage/static/js/2.5358e026.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c37071fb909919d514de",
-    "url": "/fortune-homepage/static/js/main.96adfc3d.chunk.js"
+    "revision": "22e768726eeebcc4d8e5",
+    "url": "/fortune-homepage/static/js/main.48fae32a.chunk.js"
   },
   {
     "revision": "2a179826dfde1fad7aff",

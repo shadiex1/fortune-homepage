@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/fortune-homepage/static/css/main.1d9353c3.chunk.css",
-    "main.js": "/fortune-homepage/static/js/main.96adfc3d.chunk.js",
-    "main.js.map": "/fortune-homepage/static/js/main.96adfc3d.chunk.js.map",
+    "main.js": "/fortune-homepage/static/js/main.48fae32a.chunk.js",
+    "main.js.map": "/fortune-homepage/static/js/main.48fae32a.chunk.js.map",
     "runtime-main.js": "/fortune-homepage/static/js/runtime-main.a056395d.js",
     "runtime-main.js.map": "/fortune-homepage/static/js/runtime-main.a056395d.js.map",
     "static/js/2.5358e026.chunk.js": "/fortune-homepage/static/js/2.5358e026.chunk.js",
     "static/js/2.5358e026.chunk.js.map": "/fortune-homepage/static/js/2.5358e026.chunk.js.map",
     "index.html": "/fortune-homepage/index.html",
-    "precache-manifest.20cdd1c390b81e313126ce36daa44bcf.js": "/fortune-homepage/precache-manifest.20cdd1c390b81e313126ce36daa44bcf.js",
+    "precache-manifest.4c671d28fa4ac057ed0eaae360dc040d.js": "/fortune-homepage/precache-manifest.4c671d28fa4ac057ed0eaae360dc040d.js",
     "service-worker.js": "/fortune-homepage/service-worker.js",
     "static/css/main.1d9353c3.chunk.css.map": "/fortune-homepage/static/css/main.1d9353c3.chunk.css.map",
     "static/js/2.5358e026.chunk.js.LICENSE.txt": "/fortune-homepage/static/js/2.5358e026.chunk.js.LICENSE.txt",
@@ -27,6 +27,6 @@
     "static/js/runtime-main.a056395d.js",
     "static/js/2.5358e026.chunk.js",
     "static/css/main.1d9353c3.chunk.css",
-    "static/js/main.96adfc3d.chunk.js"
+    "static/js/main.48fae32a.chunk.js"
   ]
 }
